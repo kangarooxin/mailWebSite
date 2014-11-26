@@ -41,7 +41,7 @@
 
         var mailRegex = /[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*/g;
 
-        var opts = $.extend({}, $.fn.mailWebSite.defaults, options);
+        var $opts = $.extend({}, $.fn.mailWebSite.defaults, options);
 
         function getMailHref(mail) {
         	var suffix = /[^@]+$/.exec(mail);
@@ -53,6 +53,7 @@
 
         return this.each(function() {
             var $this = $(this);
+            var opts = $.meta ? $.extend({}, $opts, $this.data()) : $opts;
             var content = $this.html();
             if(content) {
             	var mails = content.match(mailRegex);
