@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+</head>
+<body>
+    <ul>
+        <li>test@163.com</li>
+        <li>test@126.com</li>
+        <li>test@sohu.com</li>
+        <li>test@gmail.com</li>
+        <li>test@hotmail.com</li>
+        <li>test@sina.com</li>
+    </ul>
+    <div id="content">
+        这是一段测试文字test@163.com这是一段测test@sohu.com试文字。<br/>
+        this is test content test@126.com this is test content.
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="jquery.mailWebSite.js"></script>
+    <script>
+        $('ul li').mailWebSite();
+        $('#content').mailWebSite();
+    </script>
+</body>
+</html>
